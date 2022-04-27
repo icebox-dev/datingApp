@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gecdatingapp/Screens/register_screen.dart';
 import 'package:gecdatingapp/Screens/splash_screen.dart';
 import 'package:gecdatingapp/screensplit/screensplit.dart';
 import 'package:gecdatingapp/state_management/provider_state.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<StateManage>(
-      create: (context) => StateManage() ,
+      create: (context) => StateManage(),
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home: const LoginScreen(),
+        home: const ScreenSplit(),
       ),
     );
   }
