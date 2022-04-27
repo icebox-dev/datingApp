@@ -1,4 +1,5 @@
-import "package:flutter/material.dart" ;
+import "package:flutter/material.dart";
+import 'package:gecdatingapp/Screens/register_screen.dart';
 
 class OtpScreen extends StatelessWidget {
   const OtpScreen({Key? key}) : super(key: key);
@@ -8,7 +9,14 @@ class OtpScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Center(
-          child: GestureDetector(onTap:(){},child: Text("Work under Progress",)),
+          child: GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => RegisterScreen()));
+              },
+              child: Text(
+                "Work under Progress",
+              )),
         ),
       ),
     );
